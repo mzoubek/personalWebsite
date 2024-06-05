@@ -8,7 +8,7 @@ const WeatherCard = () => {
   useEffect(() => {
     const forecastWeather = async () => {
       const reponse = await fetch(
-        "http://api.weatherapi.com/v1/forecast.json?key=a2b4cb8cdc8547948ab160454240206&q=Ostrava&days=3&aqi=no&alerts=no"
+        "https://api.weatherapi.com/v1/forecast.json?key=a2b4cb8cdc8547948ab160454240206&q=Ostrava&days=3&aqi=no&alerts=no"
       );
       return reponse.json();
     };
