@@ -42,7 +42,7 @@ export const ProjectCards = [
     href: "",
   },
   {
-    title: "Azte.cz in React",
+    title: "Azte.cz\nin React",
     alt: "Azte.cz project",
     img: project1,
     description:

@@ -20,8 +20,8 @@ const Card = () => {
               : "hover:-translate-y-2 hover:scale-105 hover:from-blueBlack hover:to-betrBlack/40 hover:shadow-2xl"
           }`}
         >
-          <h3 className='font-grandSlang text-neonGreen text-2xl pt-6 pl-4'>
-            {card.title}
+          <h3 className='font-laperhens text-neonGreen text-2xl pt-6 pl-4'>
+            {card.title.split("\n")}
           </h3>
           <a
             href={card.href}

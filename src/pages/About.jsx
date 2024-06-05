@@ -3,8 +3,8 @@ import SkillCard from "../components/SkillCard";
 
 const About = () => {
   return (
-    <div className='min-h-screen'>
-      <h1 className='font-laperhens text-center text-4xl md:text-[64px] xl:text-8xl mt-[168px] md:mt-[216px]'>
+    <div>
+      <h1 className='font-laperhens text-center text-4xl md:text-[64px] xl:text-8xl pt-[168px] md:pt-[216px]'>
         I'm Martin
       </h1>
       <div className='md:flex md:flex-row md:items-center md:mt-24 md:px-8 md:gap-8 xl:px-32'>
