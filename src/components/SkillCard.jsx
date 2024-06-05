@@ -9,9 +9,11 @@ const SkillCard = () => {
         const titleParts = card.title.split("\n");
         const skillParts = card.skill.split("\n");
         return (
-          <div
+          <a
             key={index}
-            className='h-[400px] w-[300px] bg-grayWhite rounded-[55px] relative overflow-hidden'
+            href={card.href}
+            target='_blank'
+            className='h-[400px] w-[300px] cursor-pointer bg-grayWhite rounded-[55px] relative overflow-hidden ease-in-out duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl'
           >
             {titleParts.map((part, idx) => (
               <h3
@@ -32,7 +34,7 @@ const SkillCard = () => {
               </p>
             ))}
             <Icon />
-          </div>
+          </a>
         );
       })}
     </div>

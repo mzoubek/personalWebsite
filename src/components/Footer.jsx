@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import InstagramIcon from "../SVG/InstagramIcon.jsx";
 import LinkedinIcon from "../SVG/LinkedinIcon.jsx";
 import PlaystationIcon from "../SVG/PlaystationIcon.jsx";
@@ -6,8 +6,11 @@ import GithubIcon from "../SVG/GithubIcon.jsx";
 import FacebookIcon from "../SVG/FacebookIcon.jsx";
 import SpotifyCard from "./SpotifyCard.jsx";
 import WeatherCard from "./WeatherCard.jsx";
+import CloseIconW from "../SVG/CloseIconW.jsx";
 
 const Footer = () => {
+  const [showPS, setShowPS] = useState(false);
+
   return (
     <footer className='grid grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-5 lg:grid-rows-4 px-6 md:px-8 lg:px-32 mt-32 md:mt-48'>
       <WeatherCard />
@@ -25,31 +28,45 @@ const Footer = () => {
       </h3>
       <div className='flex justify-center pt-4 md:pt-0 gap-4 lg:col-start-2'>
         <a
-          href='https://www.instagram.com/'
+          href='https://www.instagram.com/martin_zoubek420/'
           target='_blank'
         >
           <InstagramIcon />
         </a>
         <a
-          href='https://www.instagram.com/'
+          href='https://www.linkedin.com/in/martin-zoubek-761539247/'
           target='_blank'
         >
           <LinkedinIcon />
         </a>
         <a
-          href='https://www.instagram.com/'
-          target='_blank'
+          className='relative'
+          onClick={() => setShowPS(true)}
         >
           <PlaystationIcon />
+          {showPS && (
+            <div className='absolute -top-10 -right-20 w-[200px] h-16 bg-blueBlack border-2 border-betrWhite rounded-[10px]'>
+              <p className='font-poppins text-betrWhite text-center'>
+                PS Account: ZubMarten
+              </p>
+              <CloseIconW
+                className={"cursor-pointer z-50 mx-auto mt-1"}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setShowPS(false);
+                }}
+              />
+            </div>
+          )}
         </a>
         <a
-          href='https://www.instagram.com/'
+          href='https://github.com/mzoubek'
           target='_blank'
         >
           <GithubIcon />
         </a>
         <a
-          href='https://www.instagram.com/'
+          href='https://www.facebook.com/profile.php?id=100009724780665'
           target='_blank'
         >
           <FacebookIcon />

@@ -23,19 +23,27 @@ const Card = () => {
           <h3 className='font-grandSlang text-neonGreen text-2xl pt-6 pl-4'>
             {card.title}
           </h3>
-          <img
-            className='w-[326px] h-auto mx-auto pt-8 md:w-[304px] lg:w-[248px]'
-            src={card.img}
-            alt={card.alt}
-            width={2880}
-            height={1560}
-          />
+          <a
+            href={card.href}
+            target='_blank'
+          >
+            <img
+              className='w-[326px] h-auto mx-auto mt-8 md:w-[304px] lg:w-[248px] border-2 border-transparent hover:border-neonGreen hover:rounded-[33px] cursor-pointer'
+              src={card.img}
+              alt={card.alt}
+              width={2880}
+              height={1560}
+            />
+          </a>
           {openCardIndex === index && (
-            <div className='absolute flex flex-col gap-5 items-center z-10 bottom-0 bg-blueBlack rounded-b-[33px] w-full h-3/5'>
+            <div className='absolute flex flex-col gap-5 items-center z-10 bottom-0 bg-blueBlack rounded-b-[33px] w-full h-4/5'>
               <p className='font-poppins text-betrWhite font-light text-sm w-[326px] md:w-[304px] lg:w-[248px] pt-4'>
                 {card.description}
               </p>
-              <CloseIconW onClick={() => cardOpen(null)} />
+              <CloseIconW
+                className={"cursor-pointer z-20"}
+                onClick={() => cardOpen(null)}
+              />
             </div>
           )}
           <div className='text-center pt-6'>

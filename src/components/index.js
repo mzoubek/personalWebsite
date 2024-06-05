@@ -10,21 +10,25 @@ export const SkillCards = [
     title: "Meta Front-end\ndeveloper",
     skill: "Javascript",
     icon: JavascriptIcon,
+    href: "https://www.coursera.org/account/accomplishments/certificate/5PSNH3VP6P2Q",
   },
   {
     title: "Meta Front-end\ndeveloper",
     skill: "Version Control",
     icon: GithubLgIcon,
+    href: "https://www.coursera.org/account/accomplishments/certificate/KUW3WE8G75PH",
   },
   {
     title: "Meta Front-end\ndeveloper",
     skill: "React Basics",
     icon: ReactIcon,
+    href: "https://www.coursera.org/account/accomplishments/certificate/NCLGNC3ERQSW",
   },
   {
     title: "Meta Front-end\ndeveloper",
     skill: "HTML & CSS\nin depth",
     icon: HTMLCSSIcon,
+    href: "https://www.coursera.org/account/accomplishments/certificate/XPL5A8VK47R2",
   },
 ];
 
@@ -35,6 +39,7 @@ export const ProjectCards = [
     img: project1,
     description:
       "This project is a simple calculator application built using React. It is designed as a beginner project to practice and demonstrate fundamental skills in React development, including component-based architecture, state management, and event handling.",
+    href: "",
   },
   {
     title: "Azte.cz in React",
@@ -42,6 +47,7 @@ export const ProjectCards = [
     img: project1,
     description:
       "As part of my ongoing commitment to improving my skills, I'm remaking azte.cz using React. This project involves restructuring the site with modern web development practices, enhancing user experience, and optimizing performance. Check out the live demo and source code to see my progress",
+    href: "",
   },
   {
     title: "Portfolio Website",
@@ -49,6 +55,7 @@ export const ProjectCards = [
     img: project1,
     description:
       "This website you're browsing is a testament to my skills in frontend development and UI/UX design. Built with React, it showcases my ability to create responsive and visually appealing web applications. Explore the source code and design process behind this project",
+    href: "",
   },
   {
     title: "CodeWars Challenges",
@@ -56,6 +63,7 @@ export const ProjectCards = [
     img: project4,
     description:
       "CodeWars is a platform where developers can practice coding challenges in various languages. I use CodeWars to sharpen my problem-solving skills, learn new algorithms, and stay up-to-date with best practices. Check out my profile to see my completed challenges and solutions",
+    href: "https://www.codewars.com/users/mzoubek17",
   },
 ];
 

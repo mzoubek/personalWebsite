@@ -66,7 +66,16 @@ const About = () => {
           industry.
         </p>
         <div className='flex items-center justify-center cursor-pointer bg-gradient-to-tr from-blueBlack to-lightBlue w-[358px] h-20 rounded-full self-center mt-8 shadow-lg transition duration-500 ease-in-out transform hover:-traslate-y-2 hover:scale-105 hover:shadow-xl hover:from-imperialRed hover:to-magenta'>
-          <a className='font-laperhens text-betrWhite'>Download my CV</a>
+          <a
+            href='/martinzoubekCV.pdf'
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "/martinzoubekCV.pdf";
+            }}
+            className='font-laperhens text-betrWhite'
+          >
+            Download my CV
+          </a>
         </div>
       </div>
     </div>
