@@ -9,9 +9,9 @@ const Navbar = () => {
           <li>
             <NavLink
               className={`text-base font-poppins p-3 rounded-full duration-200 ${
-                useMatch("/") ? "bg-white/30" : ""
+                useMatch("/personalWebsite/") ? "bg-white/30" : ""
               }`}
-              to='/'
+              to='/personalWebsite/'
             >
               Home
             </NavLink>
@@ -19,9 +19,9 @@ const Navbar = () => {
           <li>
             <NavLink
               className={`text-base font-poppins p-3 rounded-full duration-200 ${
-                useMatch("/about") ? "bg-white/30" : ""
+                useMatch("/personalWebsite/about") ? "bg-white/30" : ""
               }`}
-              to='/about'
+              to='/personalWebsite/about'
             >
               About
             </NavLink>
@@ -29,9 +29,9 @@ const Navbar = () => {
           <li>
             <NavLink
               className={`text-base font-poppins p-3 rounded-full duration-200 ${
-                useMatch("/projects") ? "bg-white/40" : ""
+                useMatch("/personalWebsite/projects") ? "bg-white/40" : ""
               }`}
-              to='/projects'
+              to='/personalWebsite/projects'
             >
               Projects
             </NavLink>

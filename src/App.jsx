@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -13,16 +14,20 @@ function App() {
       </div>
       <Routes>
         <Route
-          path='/'
+          path='/personalWebsite/'
           element={<Home />}
         />
         <Route
-          path='/about'
+          path='/personalWebsite/about'
           element={<About />}
         />
         <Route
-          path='/projects'
+          path='/personalWebsite/projects'
           element={<Projects />}
+        />
+        <Route
+          path='*'
+          element={<NotFound />}
         />
       </Routes>
       <div className='pb-[64px]'>
