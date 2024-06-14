@@ -35,28 +35,23 @@ const WeatherCard = () => {
     return [monthShortName, date.getDate()];
   });
 
-  console.log(forecast);
-
   return (
-    <div className='h-30 flex gap-4 items-center justify-center md:justify-around bg-gradient-to-tr from-white/40 to-white/10 rounded-[20px] md:col-span-2 lg:col-span-1 row-span-3 border-white/10 border-2 shadow-lg'>
+    <div className="h-30 flex gap-4 items-center justify-center md:justify-around bg-gradient-to-tr from-white/40 to-white/10 rounded-[20px] md:col-span-2 lg:col-span-1 row-span-3 border-white/10 border-2 shadow-lg">
       {forecast.forecast.forecastday.map((day, index) => (
-        <div
-          key={index}
-          className='flex flex-col items-center py-3 px-2'
-        >
-          <div className='font-poppins text-betrBlack font-light text-sm'>
+        <div key={index} className="flex flex-col items-center py-3 px-2">
+          <div className="font-poppins text-betrBlack font-light text-sm">
             {dates[index].join(", ")}
           </div>
-          <div className='font-poppins font-semibold'>
+          <div className="font-poppins font-semibold">
             {forecast.location.name}
           </div>
-          <div className='text-[12px] font-poppins font-light text-center'>
+          <div className="text-[12px] font-poppins font-light text-center">
             {forecast.location.country}
           </div>
-          <div className='font-poppins text-betrWhite text-sm font-bold text-center'>
+          <div className="font-poppins text-betrWhite text-sm font-bold text-center">
             {day.day.condition.text}
           </div>
-          <div className='font-poppins font-bold text-betrBlack text-xl'>
+          <div className="font-poppins font-bold text-betrBlack text-xl">
             {day.day.avgtemp_c}°C
           </div>
         </div>

@@ -3,6 +3,7 @@ import ReactIcon from "../SVG/ReactIcon";
 import GithubLgIcon from "../SVG/GithubLgIcon";
 import HTMLCSSIcon from "../SVG/HTMLCSSIcon";
 import project1 from "../assets/project1.png";
+import projectCalculator from "../assets/projectCalculator.png";
 import project4 from "../assets/project4.png";
 
 export const SkillCards = [
@@ -34,19 +35,19 @@ export const SkillCards = [
 
 export const ProjectCards = [
   {
-    title: "Calculator",
+    title: "Calculator in\nHTML, CSS, JS",
     alt: "Calculator project",
-    img: project1,
+    img: projectCalculator,
     description:
-      "This project is a simple calculator application built using React. It is designed as a beginner project to practice and demonstrate fundamental skills in React development, including component-based architecture, state management, and event handling.",
-    href: "",
+      "This project is a simple calculator application built using plain HTML, CSS and JS. It is designed as a beginner project to practice and demonstrate fundamental skills in Frontend development.",
+    href: "https://codepen.io/mzoubek/pen/yLWpLgZ",
   },
   {
-    title: "Azte.cz\nin React",
+    title: "Azte.cz\nin Next.js",
     alt: "Azte.cz project",
     img: project1,
     description:
-      "As part of my ongoing commitment to improving my skills, I'm remaking azte.cz using React. This project involves restructuring the site with modern web development practices, enhancing user experience, and optimizing performance. Check out the live demo and source code to see my progress",
+      "As part of my ongoing commitment to improving my skills, I'm remaking azte.cz using Next.js. This project involves restructuring the site with modern web development practices, enhancing user experience, and optimizing performance. Check out the live demo and source code to see my progress",
     href: "",
   },
   {
@@ -55,7 +56,7 @@ export const ProjectCards = [
     img: project1,
     description:
       "This website you're browsing is a testament to my skills in frontend development and UI/UX design. Built with React, it showcases my ability to create responsive and visually appealing web applications. Explore the source code and design process behind this project",
-    href: "",
+    href: "https://mzoubek.github.io/personalWebsite/",
   },
   {
     title: "CodeWars Challenges",

@@ -1,17 +1,24 @@
-import { NavLink, useMatch } from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink, useMatch, useLocation } from "react-router-dom";
 import Contact from "./Contact";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div className='w-[346px] bg-white/30 fixed top-4 z-10 rounded-full'>
-      <nav className='h-[72px] flex items-center'>
-        <ul className='flex justify-center w-full'>
+    <div className="w-[346px] bg-white/30 fixed top-4 z-10 rounded-full">
+      <nav className="h-[72px] flex items-center">
+        <ul className="flex justify-center w-full">
           <li>
             <NavLink
               className={`text-base font-poppins p-3 rounded-full duration-200 ${
                 useMatch("/personalWebsite/") ? "bg-white/30" : ""
               }`}
-              to='/personalWebsite/'
+              to="/personalWebsite/"
             >
               Home
             </NavLink>
@@ -21,7 +28,7 @@ const Navbar = () => {
               className={`text-base font-poppins p-3 rounded-full duration-200 ${
                 useMatch("/personalWebsite/about") ? "bg-white/30" : ""
               }`}
-              to='/personalWebsite/about'
+              to="/personalWebsite/about"
             >
               About
             </NavLink>
@@ -31,7 +38,7 @@ const Navbar = () => {
               className={`text-base font-poppins p-3 rounded-full duration-200 ${
                 useMatch("/personalWebsite/projects") ? "bg-white/40" : ""
               }`}
-              to='/personalWebsite/projects'
+              to="/personalWebsite/projects"
             >
               Projects
             </NavLink>

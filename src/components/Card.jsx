@@ -10,7 +10,7 @@ const Card = () => {
   };
 
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-8 items-center pt-9'>
+    <div className="flex flex-row flex-wrap justify-center gap-8 items-center pt-9">
       {ProjectCards.map((card, index) => (
         <div
           key={index}
@@ -20,15 +20,20 @@ const Card = () => {
               : "hover:-translate-y-2 hover:scale-105 hover:from-blueBlack hover:to-betrBlack/40 hover:shadow-2xl"
           }`}
         >
-          <h3 className='font-laperhens text-neonGreen text-2xl pt-6 pl-4'>
-            {card.title.split("\n")}
-          </h3>
-          <a
-            href={card.href}
-            target='_blank'
-          >
+          {card.title.split("\n").map((line, index) => (
+            <h3
+              key={index}
+              className={`font-laperhens text-neonGreen text-2xl pl-4 ${
+                index === 0 ? "pt-6" : ""
+              }`}
+            >
+              {line}
+            </h3>
+          ))}
+
+          <a href={card.href} target="_blank">
             <img
-              className='w-[326px] h-auto mx-auto mt-8 md:w-[304px] lg:w-[248px] border-2 border-transparent hover:border-neonGreen hover:rounded-[33px] cursor-pointer'
+              className="w-[326px] h-auto mx-auto mt-8 md:w-[304px] lg:w-[248px] border-2 border-transparent hover:border-neonGreen hover:rounded-[33px] cursor-pointer"
               src={card.img}
               alt={card.alt}
               width={2880}
@@ -36,8 +41,8 @@ const Card = () => {
             />
           </a>
           {openCardIndex === index && (
-            <div className='absolute flex flex-col gap-5 items-center z-10 bottom-0 bg-blueBlack rounded-b-[33px] w-full h-4/5'>
-              <p className='font-poppins text-betrWhite font-light text-sm w-[326px] md:w-[304px] lg:w-[248px] pt-4'>
+            <div className="absolute flex flex-col gap-5 items-center z-10 bottom-0 bg-blueBlack rounded-b-[33px] w-full h-4/5">
+              <p className="font-poppins text-betrWhite font-light text-sm w-[326px] md:w-[304px] lg:w-[248px] pt-4">
                 {card.description}
               </p>
               <CloseIconW
@@ -46,7 +51,7 @@ const Card = () => {
               />
             </div>
           )}
-          <div className='text-center pt-6'>
+          <div className="text-center pt-6">
             <button
               onClick={() => cardOpen(index)}
               className={`font-laperhens w-[326px] md:w-[304px] lg:w-[248px] h-[44px] bg-gradient-to-tr from-grayWhite to-darkGWhite hover:from-darkGWhite hover:to-grayWhite rounded-full shadow-lg ${
