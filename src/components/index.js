@@ -4,6 +4,7 @@ import GithubLgIcon from "../SVG/GithubLgIcon";
 import HTMLCSSIcon from "../SVG/HTMLCSSIcon";
 import project1 from "../assets/project1.png";
 import projectCalculator from "../assets/projectCalculator.png";
+import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 
 export const SkillCards = [
@@ -45,7 +46,7 @@ export const ProjectCards = [
   {
     title: "Azte.cz\nin Next.js",
     alt: "Azte.cz project",
-    img: project1,
+    img: project3,
     description:
       "As part of my ongoing commitment to improving my skills, I'm remaking azte.cz using Next.js. This project involves restructuring the site with modern web development practices, enhancing user experience, and optimizing performance. Check out the live demo and source code to see my progress",
     href: "",

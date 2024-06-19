@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ProjectCards } from "../components/index";
 import CloseIconW from "../SVG/CloseIconW";
 
 const Card = () => {
   const [openCardIndex, setOpenCardIndex] = useState(null);
+  const [showDiv, setShowDiv] = useState(false);
 
   const cardOpen = (index) => {
     setOpenCardIndex(index);
@@ -31,7 +32,17 @@ const Card = () => {
             </h3>
           ))}
 
-          <a href={card.href} target="_blank">
+          <a
+            className="relative"
+            href={card.href}
+            onClick={(e) => {
+              if (card.href === "") {
+                e.preventDefault();
+                setShowDiv(!showDiv);
+              }
+            }}
+            target="_blank"
+          >
             <img
               className="w-[326px] h-auto mx-auto mt-8 md:w-[304px] lg:w-[248px] border-2 border-transparent hover:border-neonGreen hover:rounded-[33px] cursor-pointer"
               src={card.img}
@@ -39,6 +50,16 @@ const Card = () => {
               width={2880}
               height={1560}
             />
+            {showDiv && index === 1 && (
+              <div className="absolute top-0 right-3.5 flex flex-col justify-around p-2 w-[326px] md:w-[304px] lg:w-[248px] h-full bg-blueBlack border-2 border-betrWhite ease-in-out duration-300">
+                <p className="text-betrWhite font-poppins font-bold text-center">
+                  Work in progress, will be available soon.
+                </p>
+                <p className="text-gray-500 font-poppins font-light text-center text-xs">
+                  Hopefully, in about a week first version will be available.
+                </p>
+              </div>
+            )}
           </a>
           {openCardIndex === index && (
             <div className="absolute flex flex-col gap-5 items-center z-10 bottom-0 bg-blueBlack rounded-b-[33px] w-full h-4/5">
