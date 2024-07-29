@@ -32,24 +32,27 @@ const About = () => {
           </h2>
         </RevealFromSide>
       </div>
-      <Reveal>
-        <p className="font-poppins text-betrWhite text-center px-6 mt-4 md:mt-12 md:text-xl md:px-8 xl:text-2xl xl:px-32">
-          Passionate Frontend Developer and First-Year Informatics Student at
-          VSB-TUO, self-taught through online resources and extensive practice.
-          <br />
-          <br />
-          Proficient in JavaScript, React, and enthusiastic about exploring
-          Python and C.
-          <br />
-          <br />
-          Dedicated to honing skills through platforms like CodeWars and
-          hands-on projects.
-          <br />
-          <br />
-          Adept in UI/UX design using Figma. Eager to contribute innovative
-          solutions and collaborate on impactful projects.
-        </p>
-      </Reveal>
+      <div className="px-6 mt-4 md:mt-12 md:px-8 xl:px-32">
+        <Reveal>
+          <p className="font-poppins text-betrWhite text-center md:text-xl xl:text-2xl">
+            Passionate Frontend Developer and First-Year Informatics Student at
+            VSB-TUO, self-taught through online resources and extensive
+            practice.
+            <br />
+            <br />
+            Proficient in JavaScript, React, and enthusiastic about exploring
+            Python and C.
+            <br />
+            <br />
+            Dedicated to honing skills through platforms like CodeWars and
+            hands-on projects.
+            <br />
+            <br />
+            Adept in UI/UX design using Figma. Eager to contribute innovative
+            solutions and collaborate on impactful projects.
+          </p>
+        </Reveal>
+      </div>
       <SkillCard />
       <div className="flex flex-col px-6 mt-32 md:mt-[144px] md:px-8 gap-4 md:gap-12 xl:mt-[164px] xl:px-32">
         <h2 className="font-laperhens text-4xl md:text-[64px] md:leading-[64px]">
