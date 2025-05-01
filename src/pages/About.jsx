@@ -2,13 +2,15 @@ import picture1 from "../assets/picture1.png";
 import SkillCard from "../components/SkillCard";
 import Reveal from "../components/Reveal";
 import RevealFromSide from "../components/RevealFromSide";
+import { t } from "i18next";
 
 const About = () => {
+  console.log(t("about.first_article"));
   return (
     <div>
       <RevealFromSide>
         <h1 className="font-laperhens text-center text-4xl md:text-[64px] xl:text-8xl pt-[168px] md:pt-[216px]">
-          I&apos;m Martin
+          Hi, I&apos;m Martin
         </h1>
       </RevealFromSide>
       <div className="md:flex md:flex-row md:items-center md:mt-24 md:px-8 md:gap-8 xl:px-32">
@@ -27,29 +29,25 @@ const About = () => {
         </div>
         <RevealFromSide>
           <h2 className="font-laperhens text-2xl text-center md:text-right md:text-[40px] xl:text-5xl md:leading-10 xl:leading-snug px-6 mt-9 md:px-0 md:mt-0">
-            a self taught Frontend Developer currently working for Verizon as
-            Customer Service Representative in Ostrava.
+            I build user-focused interfaces with the same precision I use to
+            write memory-efficient C code. Whether it&apos;s optimizing a loop
+            or crafting a smooth UI.
           </h2>
         </RevealFromSide>
       </div>
       <div className="px-6 mt-4 md:mt-12 md:px-8 xl:px-32">
         <Reveal>
           <p className="font-poppins text-betrWhite text-center md:text-xl xl:text-2xl">
-            Passionate Frontend Developer and First-Year Informatics Student at
-            VSB-TUO, self-taught through online resources and extensive
-            practice.
+            {t("about.first_article")}
             <br />
             <br />
-            Proficient in JavaScript, React, and enthusiastic about exploring
-            Python and C.
+            {t("about.second_article")}
             <br />
             <br />
-            Dedicated to honing skills through platforms like CodeWars and
-            hands-on projects.
+            {t("about.third_article")}
             <br />
             <br />
-            Adept in UI/UX design using Figma. Eager to contribute innovative
-            solutions and collaborate on impactful projects.
+            {t("about.fourth_article")}
           </p>
         </Reveal>
       </div>
@@ -61,20 +59,26 @@ const About = () => {
           about me...
         </h2>
         <p className="font-poppins text-betrWhite md:text-2xl">
-          I am currently working as a Customer Service Representative at Verizon
-          Czech, where I have honed my communication and problem-solving skills.
+          I didn&apos;t exactly land my dream dev job on the first try. After a
+          less-than-glorious start, I found myself doing customer support calls
+          at Verizon. But thanks to my amazing girlfriend (and way too many
+          late-night Neovim configs), I found my way back to what I love —
+          building and breaking things with code.
           <br />
           <br />
-          To further my professional development, I recently completed an
-          internal CCNA course, which provided me with a solid foundation in
-          networking. Eager to expand my expertise in the field of IT, I am set
-          to begin my studies at VSB-TUO, pursuing a degree in Information
-          Technology.
+          I completed an internal CCNA course along the way and dove deeper into
+          networking. At the time, I was using a MacBook — a gentle introduction
+          to the Linux-like world — but once I got my hands on proper Linux and
+          x86_64 architecture, I was hooked for good.
           <br />
           <br />
-          This educational journey will equip me with comprehensive knowledge
-          and skills, enabling me to excel in the dynamic and ever-evolving tech
-          industry.
+          These days, I spend more time in the terminal than on social media, my
+          dotfiles spark more joy than most apps, and low-level programming
+          feels like home.
+          <br />
+          <br />
+          Oh — and yes, I still break stuff. But now I know how to fix it
+          faster.
         </p>
         <a
           href="/personalWebsite/martinzoubekCV.pdf"

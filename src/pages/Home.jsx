@@ -1,6 +1,7 @@
 import Reveal from "../components/Reveal.jsx";
 import RevealFromSide from "../components/RevealFromSide.jsx";
 import { workingOn } from "../components/index.js";
+import { t } from "i18next";
 
 const Home = () => {
   return (
@@ -33,7 +34,7 @@ const Home = () => {
             key={index}
             className={`font-poppins flex items-center justify-center text-center xl:text-xl text-betrBlack ${item.className} h-20 bg-gradient-to-tr from-grayWhite/40 rounded-[20px] border-2 border-white/10 shadow-lg transition duration-300 ease-in-out transform delay-200 hover:bg-gradient hover:from-white/30 hover:to-white/10`}
           >
-            {item.title}
+            {t(item.title)}
           </div>
         ))}
       </div>

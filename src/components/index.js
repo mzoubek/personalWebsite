@@ -72,25 +72,25 @@ export const ProjectCards = [
 export const workingOn = [
   {
     className: "col-span-2",
-    title: "Searching for job as Frontend Developer",
+    title: "home.blocks.first_block",
     description:
       "I'm actively seeking new opportunities to apply my frontend development skills in a professional setting. If you're looking for a motivated developer with a passion for creating engaging user experiences, I'd love to hear from you. Let's connect and discuss how I can contribute to your team",
   },
   {
     className: "col-span-2 lg:row-start-2 lg:col-start-3",
-    title: "Finishing my degree on VSB-TUO, field IT",
+    title: "home.blocks.second_block",
     description:
       "I'm currently completing my studies at VSB-TUO in the field of IT. This program has equipped me with a solid foundation in computer science and software engineering, preparing me for a successful career in the tech industry. I'm excited to graduate and apply my knowledge in real-world projects",
   },
   {
     className: "col-span-2 lg:row-start-3 lg:col-start-2",
-    title: "Remaking azte.cz in React",
+    title: "home.blocks.third_block",
     description:
       "One of my personal projects involves rebuilding azte.cz using React. This project allows me to practice my frontend development skills, experiment with new technologies, and enhance my portfolio. I'm excited to share the final result with you and showcase my progress as a developer",
   },
   {
     className: "col-span-2 lg:col-span-2 row-start-4 col-start-1",
-    title: "Getting better at jiu jitsu and programming",
+    title: "home.blocks.fourth_block",
     description:
       "In addition to my professional pursuits, I'm dedicated to improving my skills in jiu jitsu and programming. Both disciplines require focus, dedication, and continuous learning to achieve mastery. By challenging myself in these areas, I aim to grow as a well-rounded individual and reach new heights in my personal and professional life",
   },
