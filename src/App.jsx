@@ -8,29 +8,17 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className='bg-gradient-to-br from-lightGreen to-darkGreen relative'>
-      <div className='flex justify-center'>
+    <div className="bg-gradient-to-br from-lightGreen to-darkGreen relative">
+      <div className="flex justify-center">
         <Navbar />
       </div>
       <Routes>
-        <Route
-          path='/personalWebsite/'
-          element={<Home />}
-        />
-        <Route
-          path='/personalWebsite/about'
-          element={<About />}
-        />
-        <Route
-          path='/personalWebsite/projects'
-          element={<Projects />}
-        />
-        <Route
-          path='*'
-          element={<NotFound />}
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <div className='pb-[64px]'>
+      <div className="pb-[64px]">
         <Footer />
       </div>
     </div>

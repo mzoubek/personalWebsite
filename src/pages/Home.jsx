@@ -1,11 +1,6 @@
 import Reveal from "../components/Reveal.jsx";
 import RevealFromSide from "../components/RevealFromSide.jsx";
 import { workingOn } from "../components/index.js";
-import { t } from "i18next";
-
-// fix ci-cl pipelines or whatever they are called
-// think about translations as czech breaks the cool font
-// remove /personalWebsite its useless
 
 const Home = () => {
   return (
@@ -23,7 +18,7 @@ const Home = () => {
         </Reveal>
         <Reveal>
           <h2 className="font-poppins font-thin text-betrWhite text-xl md:text-[32px] xl:text-4xl">
-            Frontend developer
+            Just a Developer
           </h2>
         </Reveal>
       </div>
@@ -36,9 +31,9 @@ const Home = () => {
         {workingOn.map((item, index) => (
           <div
             key={index}
-            className={`font-poppins flex items-center justify-center text-center xl:text-xl text-betrBlack ${item.className} h-20 bg-gradient-to-tr from-grayWhite/40 rounded-[20px] border-2 border-white/10 shadow-lg transition duration-300 ease-in-out transform delay-200 hover:bg-gradient hover:from-white/30 hover:to-white/10`}
+            className={`font-poppins flex items-center justify-center text-center xl:text-xl text-betrBlack ${item.className} px-9 py-5 bg-gradient-to-tr from-grayWhite/40 rounded-[20px] border-2 border-white/10 shadow-lg transition duration-300 ease-in-out transform delay-200 hover:bg-gradient hover:from-white/30 hover:to-white/10`}
           >
-            {t(item.title)}
+            {item.title}
           </div>
         ))}
       </div>

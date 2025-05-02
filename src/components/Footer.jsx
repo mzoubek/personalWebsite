@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="grid grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-5 lg:grid-rows-4 px-6 md:px-8 lg:px-32 mt-32 md:mt-48">
       <WeatherCard />
       <p className="text-betrWhite font-poppins flex items-center justify-center text-center md:col-span-2 lg:col-span-1">
-        © Martin Zoubek 2024 - made in React
+        © Martin Zoubek {new Date().getFullYear()} - made in React
       </p>
       <h3 className="text-2xl font-poppins font-bold text-neonGreen flex justify-center items-center md:col-start-1 lg:col-start-2 lg:row-start-1">
         Contact me

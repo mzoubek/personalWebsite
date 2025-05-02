@@ -2,10 +2,8 @@ import picture1 from "../assets/picture1.png";
 import SkillCard from "../components/SkillCard";
 import Reveal from "../components/Reveal";
 import RevealFromSide from "../components/RevealFromSide";
-import { t } from "i18next";
 
 const About = () => {
-  console.log(t("about.first_article"));
   return (
     <div>
       <RevealFromSide>
@@ -38,16 +36,23 @@ const About = () => {
       <div className="px-6 mt-4 md:mt-12 md:px-8 xl:px-32">
         <Reveal>
           <p className="font-poppins text-betrWhite text-center md:text-xl xl:text-2xl">
-            {t("about.first_article")}
+            I believe in building things that matter — products that are not
+            only functional, but meaningful.
             <br />
             <br />
-            {t("about.second_article")}
+            I thrive in environments where trust, autonomy, and feedback are
+            part of the culture. I enjoy collaborating with people who care —
+            about the code, the user, and the team.
             <br />
             <br />
-            {t("about.third_article")}
+            What drives me is progress. I&apos;m passionate about learning
+            low-level fundamentals (C, Assembly, memory) not to stay in the
+            past, but to build smarter in the future.
             <br />
             <br />
-            {t("about.fourth_article")}
+            For me, development isn&apos;t just about shipping features —
+            it&apos;s about crafting well-thought-out experiences that make
+            someone&apos;s day easier, faster, or more joyful.
           </p>
         </Reveal>
       </div>
@@ -81,7 +86,7 @@ const About = () => {
           faster.
         </p>
         <a
-          href="/personalWebsite/martinzoubekCV.pdf"
+          href="/martinzoubekCV.pdf"
           download
           className="font-laperhens text-betrWhite flex items-center justify-center bg-gradient-to-tr from-blueBlack to-lightBlue w-[358px] h-20 rounded-full self-center mt-8 shadow-lg cursor-pointer transition duration-500 ease-in-out transform hover:-traslate-y-2 hover:scale-105 hover:shadow-xl hover:from-imperialRed hover:to-magenta"
         >
