@@ -8,9 +8,9 @@ const Navbar = () => {
   const navRefs = useRef({});
 
   const links = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
+    { name: "Home", path: "/personalWebsite/" },
+    { name: "About", path: "/personalWebsite/about" },
+    { name: "Projects", path: "/personalWebsite/projects" },
   ];
 
   useEffect(() => {
