@@ -3,6 +3,10 @@ import RevealFromSide from "../components/RevealFromSide.jsx";
 import { workingOn } from "../components/index.js";
 import { t } from "i18next";
 
+// fix ci-cl pipelines or whatever they are called
+// think about translations as czech breaks the cool font
+// remove /personalWebsite its useless
+
 const Home = () => {
   return (
     <div className="min-h-screen">
