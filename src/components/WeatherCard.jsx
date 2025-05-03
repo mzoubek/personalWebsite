@@ -38,7 +38,10 @@ const WeatherCard = () => {
   return (
     <div className="h-30 flex gap-4 items-center justify-center md:justify-around bg-gradient-to-tr from-white/40 to-white/10 rounded-[20px] md:col-span-2 lg:col-span-1 row-span-3 border-white/10 border-2 shadow-lg">
       {forecast.forecast.forecastday.map((day, index) => (
-        <div key={index} className="flex flex-col items-center py-3 px-2">
+        <div
+          key={index}
+          className="flex flex-col items-center py-3 px-2 w-[140px]"
+        >
           <div className="font-poppins text-betrBlack font-light text-sm">
             {dates[index].join(", ")}
           </div>

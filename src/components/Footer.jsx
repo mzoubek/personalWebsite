@@ -22,7 +22,7 @@ const Footer = () => {
       <p className="text-xl text-center text-betrBlack font-poppins font-light italic flex items-center justify-center lg:col-start-2 lg:row-start-2">
         martin.zoubek17@gmail.com
       </p>
-      <h3 className="text-2xl font-poppins font-bold text-neonGreen flex items-center justify-center text-center md:col-start-2 md:row-start-4 lg:row-start-3">
+      <h3 className="text-2xl font-poppins font-bold text-neonGreen flex items-center justify-center text-center md:col-start-2 md:row-start-5 lg:row-start-3">
         Catch me here as well
       </h3>
       <div className="flex justify-center pt-4 md:pt-0 gap-4 lg:col-start-2">
