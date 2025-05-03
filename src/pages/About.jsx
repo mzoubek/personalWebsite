@@ -86,7 +86,7 @@ const About = () => {
           faster.
         </p>
         <a
-          href="/martinzoubekCV.pdf"
+          href="/Martin_Zoubek_CV.pdf"
           download
           className="font-laperhens text-betrWhite flex items-center justify-center bg-gradient-to-tr from-blueBlack to-lightBlue w-[358px] h-20 rounded-full self-center mt-8 shadow-lg cursor-pointer transition duration-500 ease-in-out transform hover:-traslate-y-2 hover:scale-105 hover:shadow-xl hover:from-imperialRed hover:to-magenta"
         >
