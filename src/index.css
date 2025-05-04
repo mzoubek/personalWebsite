@@ -76,6 +76,10 @@
   src: url("/fonts/super-brain-font/superbrain-yyjl2.ttf") format("truetype");
 }
 
+#root {
+  height: 100%;
+}
+
 .active {
   color: "#8EF506";
 }
