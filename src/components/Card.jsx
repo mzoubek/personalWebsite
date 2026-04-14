@@ -1,78 +1,50 @@
-import { useState } from "react";
 import { ProjectCards } from "../components/index";
-import CloseIconW from "../SVG/CloseIconW";
+import Reveal from "./Reveal";
 
 const Card = () => {
-  const [openCardIndex, setOpenCardIndex] = useState(null);
-  const [showDiv, setShowDiv] = useState(false);
-
-  const cardOpen = (index) => {
-    setOpenCardIndex(index);
-  };
-
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-8 items-center pt-9">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {ProjectCards.map((card, index) => (
-        <div
-          key={index}
-          className={`relative w-[358px] h-[394px] rounded-[33px] bg-gradient-to-tr from-blueBlack/50 md:w-[336px] lg:w-[280px] border-2 border-white/10 border-solid shadow-lg transition duration-500 ease-in-out transform ${
-            openCardIndex === index
-              ? "-translate-y-2 scale-105 from-blueBlack to-betrBlack/40 shadow-2xl"
-              : "hover:-translate-y-2 hover:scale-105 hover:from-blueBlack hover:to-betrBlack/40 hover:shadow-2xl"
-          }`}
-        >
-          {card.title.split("\n").map((line, index) => (
-            <h3
-              key={index}
-              className={`font-laperhens text-neonGreen text-2xl pl-4 ${
-                index === 0 ? "pt-6" : ""
-              }`}
-            >
-              {line}
-            </h3>
-          ))}
-
+        <Reveal key={index}>
           <a
-            className="relative"
             href={card.href}
-            onClick={(e) => {
-              if (card.href === "") {
-                e.preventDefault();
-                setShowDiv(!showDiv);
-              }
-            }}
             target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-surface border border-white/[0.06] rounded-2xl overflow-hidden transition-all duration-300 hover:border-accent/20 hover:shadow-lg hover:shadow-accent/5"
           >
-            <img
-              className="w-[326px] h-[140px] object-fill mx-auto mt-8 md:w-[304px] lg:w-[248px] border-2 border-transparent hover:border-neonGreen hover:rounded-[33px] cursor-pointer"
-              src={card.img}
-              alt={card.alt}
-              width={2880}
-              height={1560}
-            />
-          </a>
-          {openCardIndex === index && (
-            <div className="absolute flex flex-col gap-5 items-center z-10 bottom-0 bg-blueBlack rounded-b-[33px] w-full h-4/5">
-              <p className="font-poppins text-betrWhite font-light text-sm w-[326px] md:w-[304px] lg:w-[248px] pt-4">
-                {card.description}
-              </p>
-              <CloseIconW
-                className={"cursor-pointer absolute bottom-14 z-20"}
-                onClick={() => cardOpen(null)}
+            <div className="h-44 md:h-48 overflow-hidden bg-surface-light">
+              <img
+                src={card.img}
+                alt={card.alt}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
               />
             </div>
-          )}
-          <div className="text-center pt-11">
-            <button
-              onClick={() => cardOpen(index)}
-              className={`font-laperhens w-[326px] md:w-[304px] lg:w-[248px] h-[44px] bg-gradient-to-tr from-grayWhite to-darkGWhite hover:from-darkGWhite hover:to-grayWhite rounded-full shadow-lg ${
-                openCardIndex === card.index ? "hidden" : ""
-              }`}
-            >
-              More info
-            </button>
-          </div>
-        </div>
+            <div className="p-6">
+              <h3 className="font-poppins text-base md:text-lg font-semibold text-white mb-2">
+                {card.title.replace("\n", " ")}
+              </h3>
+              <p className="font-poppins text-sm text-zinc-500 leading-relaxed line-clamp-3">
+                {card.description}
+              </p>
+              <div className="flex items-center gap-1.5 mt-4 text-accent text-sm font-poppins font-medium">
+                View project
+                <svg
+                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </div>
+          </a>
+        </Reveal>
       ))}
     </div>
   );

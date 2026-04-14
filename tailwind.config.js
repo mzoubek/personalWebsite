@@ -4,15 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        lightGreen: "#A7CB54",
-        medGreen: "#5CAD4A",
-        darkGreen: "#208D45",
-        neonGreen: "#8EF506",
+        bg: "#050505",
+        surface: {
+          DEFAULT: "#0f0f11",
+          light: "#181819",
+        },
+        accent: {
+          DEFAULT: "#a78bfa",
+          light: "#c4b5fd",
+          dim: "#7c3aed",
+        },
         betrWhite: "#F0F2EB",
-        grayWhite: "#D9D9D9",
-        darkGWhite: "#737373",
+        neonGreen: "#8EF506",
         betrBlack: "#0F1020",
         blueBlack: "#202030",
+        grayWhite: "#D9D9D9",
+        darkGWhite: "#737373",
         lightBlue: "#646496",
         imperialRed: "#FF3E41",
         magenta: "#DF367C",
@@ -24,9 +31,6 @@ export default {
         anomaly: ["Anomaly", "cursive"],
         laperhens: ["Laperhens", "cursive"],
         superBrain: ["Super Brain", "cursive"],
-      },
-      blur: {
-        10: "10px",
       },
     },
   },

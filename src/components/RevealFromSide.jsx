@@ -14,17 +14,11 @@ const RevealFromSide = ({ children }) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} className={`relative overflow-hidden`}>
+    <div ref={ref} className="relative overflow-hidden">
       <motion.div
         variants={{
-          hidden: {
-            opacity: 0,
-            x: -75,
-          },
-          visible: {
-            opacity: 1,
-            x: 0,
-          },
+          hidden: { opacity: 0, x: -40 },
+          visible: { opacity: 1, x: 0 },
         }}
         initial="hidden"
         animate={mainControls}

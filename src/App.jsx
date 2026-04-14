@@ -8,19 +8,15 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="bg-gradient-to-br from-lightGreen to-darkGreen relative">
-      <div className="flex justify-center">
-        <Navbar />
-      </div>
+    <div className="bg-bg text-zinc-200 min-h-screen">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <div className="pb-[64px]">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

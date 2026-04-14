@@ -76,10 +76,37 @@
   src: url("/fonts/super-brain-font/superbrain-yyjl2.ttf") format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #root {
   height: 100%;
 }
 
-.active {
-  color: "#8EF506";
+::selection {
+  background: rgba(167, 139, 250, 0.3);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3d;
 }
