@@ -21,8 +21,8 @@ const About = () => {
 
         {/* Photo + Intro */}
         <div className="flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-16 mb-20">
-          <Reveal>
-            <div className="shrink-0 p-2">
+          <div className="shrink-0">
+            <Reveal>
               <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-accent/20">
                 <img
                   src={picture1}
@@ -30,8 +30,8 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
           <RevealFromSide>
             <h2 className="font-laperhens text-2xl md:text-3xl lg:text-4xl text-zinc-300 leading-snug text-center md:text-left">
               I build user-focused interfaces with the same precision I use to
